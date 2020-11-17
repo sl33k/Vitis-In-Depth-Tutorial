@@ -84,13 +84,15 @@ cat
 
 5. *Disable CPU IDLE in kernel config.*
 
-   *CPU IDLE would cause CPU IDLE when JTAG is connected. So it is recommended to disable the selection during project development phase. It can be enabled for production to save power.*
-   a) Type ```petalinux-config -c kernel```
-   b) Ensure the following items are ***TURNED OFF*** by entering 'n' in the [ ] menu selection:
+   *CPU IDLE would cause CPU IDLE when JTAG is connected. So it is recommended to disable the selection during project development phase. It can be enabled for production to save power.*</br>
+   
+   a) Type ```petalinux-config -c kernel```.</br>
+   b) Ensure the following items are ***TURNED OFF*** by entering 'n' in the [ ] menu selection: </br>
 
    - ***CPU Power Mangement > CPU Idle > CPU idle PM support***
    - ***CPU Power Management > CPU Frequency scaling > CPU Frequency scaling***
-   C) Exit and Save.
+   </br>
+   c) Exit and Save.
 
 6. Update the Device tree.
 
@@ -166,7 +168,5 @@ cat
 We would install Vitis AI library and DNNDK into this rootfs during test phase.
 
 ***Note: Now HW platform and SW platform are all generated. Next we would [package the Vitis Platform](step3.md).***
-
-   ```
 
 <p align="center"><sup>Copyright&copy; 2020 Xilinx</sup></p>
