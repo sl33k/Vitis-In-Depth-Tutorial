@@ -50,12 +50,12 @@
    d) Uncheck ***USB 0***
    e) Expand ***Application Processor Unit*** by clicking the ***>*** symbol.<br />
    f) Uncheck ***Timer 0***.<br />
-   g) Select ***Page Navigator > PS-PL Configuration***. 
-   h) Expand ***AXI Non Secure Enablement***, and ***GP Master AXI Interface***. 
-   i) Uncheck ***M AXI GP0 interface***. 
-   j) Select ***Page Navigator > Clock Configuration***. 
-   k) Expand ***PL Fabric Clocks***. 
-   l) Change the ***Requested Frequency*** to 50.00.  
+   g) Select ***Page Navigator > PS-PL Configuration***.<br />
+   h) Expand ***AXI Non Secure Enablement***, and ***GP Master AXI Interface***.<br />
+   i) Uncheck ***M AXI GP0 interface***.<br />
+   j) Select ***Page Navigator > Clock Configuration***.<br />
+   k) Expand ***PL Fabric Clocks***.<br />
+   l) Change the ***Requested Frequency*** to 50.00.<br />
    m) Click OK.<br />
    n) Confirm that the IP block now looks like this.<br />
    ![hp_removed.png](./images/hp_removed.png)<br />
@@ -219,21 +219,6 @@ V++ linker can automatically link the interrupt signals between kernel and platf
    - Description: This platform provides high PS DDR bandwidth and four clocks: 50, 75, 100 and 150 MHz.
 10. Fill in XSA file name: ***zedboard_platform***, export directory: ***<your_vivado_design_dir>***
 11. Click ***Finish***. zedboard_platform.xsa will be generated. You can exit Vivado now. 
-
-Alternatively, the above export can be done in Tcl scripts
-
-```tcl
-# Setting platform properties
-set_property platform.default_output_type "sd_card" [current_project]
-set_property platform.design_intent.embedded "true" [current_project]
-set_property platform.design_intent.server_managed "false" [current_project]
-set_property platform.design_intent.external_host "false" [current_project]
-set_property platform.design_intent.datacenter "false" [current_project]
-# Write pre-synthesis expandable XSA
-write_hw_platform -force -file ./zcu104_custom_platform.xsa
-# Or uncomment command below to write post-implementation expandable XSA
-# write_hw_platform -unified -include_bit ./zcu104_custom_platform.xsa
-```
 
 ***Now we finish the Hardware platform creation flow, then we should go to the [Step2: Software platform creation](./step2.md)***
 
