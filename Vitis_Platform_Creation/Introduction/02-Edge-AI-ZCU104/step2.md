@@ -57,7 +57,7 @@ cat
    CONFIG_protobuf
    CONFIG_python3-pip
    CONFIG_apt
-   CONFIG_dkpg
+   CONFIG_dpkg
    CONFIG_json-c-dev
    CONFIG_protobuf-dev
     ```
