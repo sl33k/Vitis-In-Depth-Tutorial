@@ -46,7 +46,6 @@ cat
    CONFIG_parted
    CONFIG_packagegroup-petalinux-self-hosted
    CONFIG_cmake
-   CONFIG_packagegroup-petalinux-vitisai-dev
    CONFIG_xrt-dev
    CONFIG_opencl-clhpp-dev
    CONFIG_opencl-headers-dev
